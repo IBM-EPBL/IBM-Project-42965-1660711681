@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Donor App</title>
+	<link rel="stylesheet" href="style.css">
+
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+<div>Plasma Donor App</div>
+	<ul>
+		<li><a href="register.html">Register</a></li>
+		<li><a class="active" href="register.html">Request</a></li>
+	</ul>
+</div>
+ <div class="login" >
+		<div>
+		</div>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('loginpage')}}"method="post">
+    	<input type="text" name="user" placeholder="Enter UserName" required="required" style="color:black" />
+        <input type="password" name="passw" placeholder="Enter Password" required="required" style="color:black" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    
+    </form>
+<br><br>
+<div style="color:black"></div>
+ </div>
+
+</body>
+</html>
